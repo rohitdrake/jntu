@@ -5,8 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },"scripts": {
+    "start": "node app.js"
   },
-  "author": "",
+  "engines": {
+    "node": "6.10.0"
+  },
+  "author": "team_vijay",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
