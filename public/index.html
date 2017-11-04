@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>AnalyzR</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+        <h1>AnalyzR</h1>
+    </div>
+    <!-- Panic row starts   ---->
+    <div class="row panic">
+      <div class="row">
+        <p>Are you in some kind of danger? Than press <strong>"PANIC"</strong><p>
+      </div>
+      <div class="row">
+        <a class="button button-primary" id="PANIC" href="/panic.html">PANIC</a>
+      </div>
+    </div>
+    <!-- Panic row ends   ---->
+
+    <!-- Survillance row starts -->
+    <div class="row survillance">
+      <div class="row">
+        <p>Want to avoid unpleasent situation? Than press <strong>"SURVILLANCE"</strong><p>
+      </div>
+      <div class="row">
+        <a class="button button-primary" id="SURVILLANCE" href="./surivillance/survillance.html">SURVILLANCE</a>
+      </div>
+    </div>
+    <!-- Survillance row end -->
+
+    <!-- Analyze row starts -->
+    <div class="row analyze">
+      <div class="row">
+        <p>Want to analyze crime data of your current location? Than press <strong>"ANALYZE"</strong><p>
+      </div>
+      <div class="row">
+        <a class="button button-primary" id="ANALYZE" href="/analyze.html">ANALYZE</a>
+      </div>
+    </div>
+    <!-- Analyze row ends -->
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<script>
+var text = `
+  Welcome to AnalyzR!
+  If you need immediate help than press Panic button at the top,
+  If you want to get alerted in dangerous area than press SURVILLANCE button in middle,
+  If you want to analyze crime data of your current location than press ANALYZE button at bottom.
+`;
+let painObj=document.getElementById("PANIC");
+let surv=document.getElementById("SURVILLANCE");
+let analyzer=document.getElementById("ANALYZE");
+painObj.onclick = (eventObj) => {
+  var text;
+  text = "you pressed panic button, getting you an immediate help";
+  var msg = new SpeechSynthesisUtterance(text);
+  window.speechSynthesis.speak(msg);
+};
+surv.onclick = (eventObj) => {
+  var text;
+  text = "you pressed SURVILLANCE button, now your app will alert you in case of danger";
+  var msg = new SpeechSynthesisUtterance(text);
+  window.speechSynthesis.speak(msg);
+};
+analyzer.onclick = (eventObj) => {
+  var text;
+  text = "you pressed ANALYZE button, now your will get data to analyze depending on your choices";
+  var msg = new SpeechSynthesisUtterance(text);
+  window.speechSynthesis.speak(msg);
+};
+
+var msg = new SpeechSynthesisUtterance(text);
+window.onload = window.speechSynthesis.speak(msg);
+</script>
+</html>

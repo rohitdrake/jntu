@@ -1,0 +1,16 @@
+h1  {
+  color: white;
+  background-color: black;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+div {
+  text-align: center;
+}
+
+.state, .district {
+  margin: 5%;
+}

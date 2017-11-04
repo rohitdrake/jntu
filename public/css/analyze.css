@@ -1,0 +1,32 @@
+div {
+  text-align: center;
+}
+
+h1  {
+  color: white;
+  background-color: black;
+}
+
+p   {
+  font-size: 1.2em;
+}
+
+.Adminstrator {
+  margin: 5%;
+}
+
+.BusinessPerson {
+  margin: 5%;
+}
+
+.Citizen {
+  margin: 5%;
+}
+
+.Adminstrator .row a  {
+  background-color: #a86d00;
+}
+
+.BusinessPerson .row a {
+  background-color: #24a800;
+}

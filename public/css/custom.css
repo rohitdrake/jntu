@@ -1,0 +1,29 @@
+h1  {
+  /*text-align: center;*/
+  color: white;
+  background-color: black;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+div {
+  text-align: center;
+}
+
+ .panic, .survillance, .analyze{
+  margin: 5%;
+}
+
+.panic .row a {
+  background-color: red;
+}
+
+.survillance .row a {
+  background-color: #f1f442;
+}
+
+.analyze  .row a  {
+  background-color: #24a800;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "alert_police_station",
+  "version": "1.0.0",
+  "description": "\"app for helping woman and children\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha server/**/*.test.js"
+  },
+  "engines": {
+    "node": "6.10.0"
+  },
+  "author": "team_vijay",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "plivo": "^0.4.1",
+    "request": "^2.83.0"
+  }
+}
