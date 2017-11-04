@@ -26,15 +26,15 @@ const seriouscrimeMW = require('./middleware/seriouscrimeMW');
 const seriouscrimeforstateMW = require('./middleware/seriouscrimeforstateMW.js');
 
 // middleware for getting address of user using data sent by them
-let addressMW = require('/Users/rohitbhardwaj/Desktop/hyd/middleware/middleware_gethelp/addressMW.js');
+let addressMW = require('./middleware/middleware_gethelp/addressMW.js');
 // middleware for sending address of user to neares police station
-let sendsmsMW  = require('/Users/rohitbhardwaj/Desktop/hyd/middleware/middleware_gethelp/sendsmsMW.js');
+let sendsmsMW  = require('./middleware/middleware_gethelp/sendsmsMW.js');
 // middleware for getting reference of nearest police station
-let searchpsMW   = require('/Users/rohitbhardwaj/Desktop/hyd/middleware/middleware_gethelp/searchpsMW.js');
+let searchpsMW   = require('./middleware/middleware_gethelp/searchpsMW.js');
 // middleware for getting details of nearest police station
-let nearestpsdetailMW = require('/Users/rohitbhardwaj/Desktop/hyd/middleware/middleware_gethelp/nearestpsdetailMW.js');
+let nearestpsdetailMW = require('./middleware/middleware_gethelp/nearestpsdetailMW.js');
 // middlewre for serving map from user to police station
-let preparemapMW = require('/Users/rohitbhardwaj/Desktop/hyd/middleware/middleware_gethelp/preparemapMW.js');
+let preparemapMW = require('./middleware/middleware_gethelp/preparemapMW.js');
 
 app.listen(3000, () => console.log("listening on port 3000!"));
 
@@ -46,5 +46,5 @@ app.use('/businessCrime', [getDistrictNameMW , givedistrictindexMW,businessMW]);
 app.use('/analyzeState', [getstatenameMW, analyzestateMW]);
 app.use('/seriousCrime', [getDistrictNameMW , givedistrictindexMW,seriouscrimeMW]);
 app.use('/seriousCrimeforState', [require("./middleware/districtindexforstateMW"), seriouscrimeforstateMW]);
-app.use('/getStateRank', require("/Users/rohitbhardwaj/Desktop/hyd/middleware/getranklistMW.js"));
-app.use('/terrorStateStatus', [getstatenameMW, require("/Users/rohitbhardwaj/Desktop/hyd/middleware/terrordataMW.js")]);
+app.use('/getStateRank', require("./middleware/getranklistMW.js"));
+app.use('/terrorStateStatus', [getstatenameMW, require("./middleware/terrordataMW.js")]);
