@@ -36,7 +36,8 @@ let nearestpsdetailMW = require('./middleware/middleware_gethelp/nearestpsdetail
 // middlewre for serving map from user to police station
 let preparemapMW = require('./middleware/middleware_gethelp/preparemapMW.js');
 
-app.listen((process.env.PORT || 3000), () => console.log("listening on port 3000!"));
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`listening on port ${port}!`));
 
 
 app.use('/panic', [addressMW , searchpsMW, nearestpsdetailMW, sendsmsMW, preparemapMW]);
