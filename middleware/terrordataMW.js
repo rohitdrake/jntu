@@ -1,7 +1,7 @@
 const express = require('express');
 const router  = express.Router();
 
-let govtData = require("/Users/rohitbhardwaj/Desktop/hyd/data/district_crime_data").data;
+let govtData = require("../data/district_crime_data").data;
 
 let state_array = [/* array for holding state terror crime data */];
 // sample element of array
